@@ -2,11 +2,8 @@
 
 A simple and adaptive subclass of UITextField which attaches a contact picker to the textfield's input accessory view. 
 
-#### Keyboard Appearance - Default / Light
-<img src="/screenshots/white-accessory-view.gif" height="1136" width="640"/>
-
-#### Keyboard Appearance - Dark
-<img src="/screenshots/dark-accessory-view.gif" height="1136" width="640"/>
+#### Keyboard Appearance - Default / Dark
+<img src="/screenshots/white-accessory-view.gif" height="355" width="200"/>  <img src="/screenshots/dark-accessory-view.gif" height="355" width="200"/>
 
 ##### Note: This Library uses Contacts.framework and hence one needs to provide `NSContactsUsageDescription` in the app's `Info.plist` specifying an appropriate reason.
 
