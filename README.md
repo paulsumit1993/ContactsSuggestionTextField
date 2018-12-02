@@ -2,6 +2,14 @@
 
 A simple and adaptive subclass of UITextField which attaches a contact picker to the textfield's input accessory view. 
 
+#### Keyboard Appearance - Default / Light
+<img src="/screenshots/white-accessory-view.gif" />
+
+#### Keyboard Appearance - Dark
+<img src="/screenshots/dark-accessory-view.gif" />
+
+##### Note: This Library uses Contacts.framework and hence one needs to provide `NSContactsUsageDescription` in the app's `Info.plist` specifying an appropriate reason.
+
 ## Usage
 
 To start using the component add it to your project using Carthage or manually as per the [Installation](#installation) section.
@@ -14,10 +22,10 @@ To create an instance of the class, use Interface builder, or do it from code. T
 let textField = ContactsSuggestionTextField(frame: CGRect(x: 10, y: 10, width: 200, height: 45))
 
 /// customize the textfield.
-/// For Interface Builder, an IBOutlet can be created and the customize block can be created as illustrated below.
+/// For Interface Builder, an IBOutlet can be created and the customization can be done as illustrated below.
 textField.customize = { builder in
-builder.contactNameStyle = .short
-builder.contactType = .emailAddress
+    builder.contactNameStyle = .short
+    builder.contactType = .emailAddress
 }
 self.view.addSubview(textField)
 ```
