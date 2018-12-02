@@ -3,10 +3,10 @@
 A simple and adaptive subclass of UITextField which attaches a contact picker to the textfield's input accessory view. 
 
 #### Keyboard Appearance - Default / Light
-<img src="/screenshots/white-accessory-view.gif" />
+<img src="/screenshots/white-accessory-view.gif" height="1136" width="640"/>
 
 #### Keyboard Appearance - Dark
-<img src="/screenshots/dark-accessory-view.gif" />
+<img src="/screenshots/dark-accessory-view.gif" height="1136" width="640"/>
 
 ##### Note: This Library uses Contacts.framework and hence one needs to provide `NSContactsUsageDescription` in the app's `Info.plist` specifying an appropriate reason.
 
@@ -29,6 +29,15 @@ textField.customize = { builder in
 }
 self.view.addSubview(textField)
 ```
+
+Do something when the user selects a contact like the following:
+
+```swift
+tf.contactSelectedHandler = { [weak self] contact: String in
+    // do something with contact
+}
+```
+
 # Installation
 #### Carthage
 The component supports [Carthage](https://github.com/Carthage/Carthage). Start by making sure you have the latest version of Carthage installed. Using [Homebrew](http://brew.sh/) run this:
