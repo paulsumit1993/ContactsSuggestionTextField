@@ -26,9 +26,6 @@ final class ContactsSuggestionInputAccessoryView: UIView {
         }
     }
     
-    private var contactsSuggestionCollectionViewDelegate: ContactsSuggestionCollectionViewDelegate?
-    private var contactsSuggestionCollectionViewDatasource: ContactsSuggestionCollectionViewDatasource?
-    
     private var contactsManager: ContactsManager?
     
     /// used to filter contacts.
@@ -61,10 +58,8 @@ final class ContactsSuggestionInputAccessoryView: UIView {
     private func setupCollectionView() {
         let cell = UINib(nibName: ContactsSuggestionInputAccessoryCell.className, bundle: Bundle(for: ContactsSuggestionInputAccessoryView.self))
         contactsCollectionView.register(cell, forCellWithReuseIdentifier: ContactsSuggestionInputAccessoryCell.className)
-        contactsSuggestionCollectionViewDelegate = ContactsSuggestionCollectionViewDelegate(contacts: filteredArray, selectionHandler: contactSelectedHandler)
-        contactsSuggestionCollectionViewDatasource = ContactsSuggestionCollectionViewDatasource(contacts: filteredArray, backgroundAppearance: backgroundAppearance)
-        contactsCollectionView.delegate = contactsSuggestionCollectionViewDelegate
-        contactsCollectionView.dataSource = contactsSuggestionCollectionViewDatasource
+        contactsCollectionView.delegate = self
+        contactsCollectionView.dataSource = self
     }
     
     /// Used for customizing the accessory view.
@@ -81,5 +76,44 @@ final class ContactsSuggestionInputAccessoryView: UIView {
             backgroundVisualEffectView.effect = UIBlurEffect(style: .dark)
         }
         contactsManager = ContactsManager(contactType: builder.contactType, nameStyle: builder.contactNameStyle)
+    }
+}
+
+
+// MARK: - UICollectionViewDelegate
+extension ContactsSuggestionInputAccessoryView: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let emailAddress = filteredArray[indexPath.row].emailAddress {
+            contactSelectedHandler?(emailAddress)
+            return
+        }
+        
+        if let phoneNumber = filteredArray[indexPath.row].phoneNumber {
+            contactSelectedHandler?(phoneNumber)
+            return
+        }
+    }
+}
+
+// MARK: - UICollectionViewDataSource
+extension ContactsSuggestionInputAccessoryView: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filteredArray.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ContactsSuggestionInputAccessoryCell.className, for: indexPath) as? ContactsSuggestionInputAccessoryCell else { fatalError() }
+        cell.configure(with: filteredArray[indexPath.row], backgroundStyle: backgroundAppearance)
+        return cell
+    }
+}
+
+// MARK:- UICollectionViewDelegateFlowLayout
+extension ContactsSuggestionInputAccessoryView: UICollectionViewDelegateFlowLayout {
+    /// Used for determing the width of the cell depending on the width of the longest string.
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let width = filteredArray[indexPath.row].longestLength
+        return CGSize(width: width + 40, height: AccessoryViewDimension.height)
     }
 }
