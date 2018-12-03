@@ -43,6 +43,24 @@ tf.contactSelectedHandler = { [weak self] contact: String in
 ```
 
 # Installation
+
+#### CocoaPods
+The control is available through [CocoaPods](https://cocoapods.org/). CocoaPods can be installed using [Ruby gems](https://rubygems.org/):
+```shell
+$ gem install cocoapods
+```
+
+Then simply add `ContactsSuggestionTextField` to your Podfile:
+
+```
+pod 'ContactsSuggestionTextField', '~> 0.0.3'
+```
+
+Lastly, let CocoaPods fetch the latest version of the component by running:
+```shell
+$ pod update
+```
+
 #### Carthage
 The component supports [Carthage](https://github.com/Carthage/Carthage). Start by making sure you have the latest version of Carthage installed. Using [Homebrew](http://brew.sh/) run this:
 ```shell
