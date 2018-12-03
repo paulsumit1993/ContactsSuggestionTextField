@@ -1,7 +1,3 @@
-//
-//  ContactsSuggestionInputAccessoryView.swift
-//
-//  Copyright © 2018 Sumit Paul. All rights reserved.
 
 import UIKit
 
@@ -113,7 +109,7 @@ extension ContactsSuggestionInputAccessoryView: UICollectionViewDataSource {
 extension ContactsSuggestionInputAccessoryView: UICollectionViewDelegateFlowLayout {
     /// Used for determing the width of the cell depending on the width of the longest string.
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = filteredArray[indexPath.row].longestLength
+        let width = filteredArray[indexPath.row].largestLength
         return CGSize(width: width + 40, height: AccessoryViewDimension.height)
     }
 }

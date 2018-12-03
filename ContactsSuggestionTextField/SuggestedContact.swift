@@ -1,7 +1,3 @@
-//
-//  SuggestedContact.swift
-//
-//  Copyright © 2018 Sumit Paul. All rights reserved.
 
 import Contacts
 
@@ -64,7 +60,7 @@ struct SuggestedContact: Hashable {
         return phoneNumber?.width(withConstrainedHeight: AccessoryViewDimension.height, font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.styleForDevice)) ?? 0.0
     }
     
-    var longestLength: CGFloat {
+    var largestLength: CGFloat {
         return max(max(fullNameWidth, emailAddressWidth), phoneNumberWidth)
     }
 }

@@ -1,7 +1,3 @@
-//
-//  String+Width.swift
-//
-//  Copyright © 2018 Sumit Paul. All rights reserved.
 
 import UIKit
 
