@@ -1,7 +1,7 @@
 # ContactsSuggestionTextField
 [![iOS](https://img.shields.io/badge/platform-iOS_10+-blue.svg?style=flat)](https://developer.apple.com/ios/) [![Swift 4+](https://img.shields.io/badge/Swift-4.0+-F16D39.svg?style=flat)](https://swift.org) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-A simple and adaptive UITextField subclass which attaches a contact picker to the textfield's input accessory view. 
+A simple and adaptive UITextField subclass which attaches a contact picker to the textfield's input accessory view for seamless contact access. 
 
 #### Keyboard Appearance - Light / Dark
 <img src="/screenshots/white-accessory-view.gif" height="355" width="200"/>  <img src="/screenshots/dark-accessory-view.gif" height="355" width="200"/>
