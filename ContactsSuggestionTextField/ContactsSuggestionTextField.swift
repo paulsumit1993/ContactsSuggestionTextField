@@ -27,7 +27,7 @@ public final class ContactsSuggestionTextField: UITextField {
     
     private func setupSuggestionsView(with builder: ContactCustomizationBuilder = ContactCustomizationBuilder()) {
         contactsAccessoryView = Bundle(for: ContactsSuggestionTextField.self).loadNibNamed(ContactsSuggestionInputAccessoryView.className, owner: nil, options: nil)?.first as? ContactsSuggestionInputAccessoryView
-        contactsAccessoryView?.frame = contactsAccessoryView?.accessoryViewFrame ?? CGRect.zero
+        contactsAccessoryView?.frame = AccessoryViewDimension.frame
         contactsAccessoryView?.configure(with: builder, keyboardAppearance: keyboardAppearance)
         self.addTarget(self, action: #selector(didBeginEditing), for: UIControl.Event.editingDidBegin)
         self.addTarget(self, action: #selector(editingChanged), for: UIControl.Event.editingChanged)

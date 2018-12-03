@@ -51,4 +51,20 @@ struct SuggestedContact: Hashable {
             self.phoneNumber = cnContact.phoneNumbers.first?.value.stringValue
         }
     }
+    
+    private var fullNameWidth: CGFloat {
+        return fullName.width(withConstrainedHeight: AccessoryViewDimension.height, font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.styleForDevice))
+    }
+
+    private var emailAddressWidth: CGFloat {
+        return emailAddress?.width(withConstrainedHeight: AccessoryViewDimension.height, font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.styleForDevice)) ?? 0.0
+    }
+
+    private var phoneNumberWidth: CGFloat {
+        return phoneNumber?.width(withConstrainedHeight: AccessoryViewDimension.height, font: UIFont.preferredFont(forTextStyle: UIFont.TextStyle.styleForDevice)) ?? 0.0
+    }
+    
+    var longestLength: CGFloat {
+        return max(max(fullNameWidth, emailAddressWidth), phoneNumberWidth)
+    }
 }

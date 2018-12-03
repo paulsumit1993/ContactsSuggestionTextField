@@ -18,6 +18,10 @@
 		9501300121B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95012FF721B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.xib */; };
 		9501300221B3FFE80000B11C /* SuggestedContact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95012FF821B3FFE80000B11C /* SuggestedContact.swift */; };
 		9501300321B3FFE80000B11C /* ContactsSuggestionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95012FF921B3FFE80000B11C /* ContactsSuggestionTextField.swift */; };
+		9501303721B4FCC20000B11C /* AccessoryViewDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501303621B4FCC20000B11C /* AccessoryViewDimension.swift */; };
+		9501303921B4FE6C0000B11C /* UIFontTextStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501303821B4FE6C0000B11C /* UIFontTextStyle+Extension.swift */; };
+		9501303B21B501DB0000B11C /* ContactsSuggestionCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501303A21B501DB0000B11C /* ContactsSuggestionCollectionViewDelegate.swift */; };
+		9501303D21B504590000B11C /* ContactsSuggestionCollectionViewDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501303C21B504590000B11C /* ContactsSuggestionCollectionViewDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		95012FF721B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContactsSuggestionInputAccessoryView.xib; sourceTree = "<group>"; };
 		95012FF821B3FFE80000B11C /* SuggestedContact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuggestedContact.swift; sourceTree = "<group>"; };
 		95012FF921B3FFE80000B11C /* ContactsSuggestionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsSuggestionTextField.swift; sourceTree = "<group>"; };
+		9501303621B4FCC20000B11C /* AccessoryViewDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewDimension.swift; sourceTree = "<group>"; };
+		9501303821B4FE6C0000B11C /* UIFontTextStyle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFontTextStyle+Extension.swift"; sourceTree = "<group>"; };
+		9501303A21B501DB0000B11C /* ContactsSuggestionCollectionViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSuggestionCollectionViewDelegate.swift; sourceTree = "<group>"; };
+		9501303C21B504590000B11C /* ContactsSuggestionCollectionViewDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsSuggestionCollectionViewDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,12 +78,16 @@
 				95012FF521B3FFE80000B11C /* ContactsSuggestionInputAccessoryCell.swift */,
 				95012FF021B3FFE80000B11C /* ContactsSuggestionInputAccessoryCell.xib */,
 				95012FF121B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.swift */,
+				9501303A21B501DB0000B11C /* ContactsSuggestionCollectionViewDelegate.swift */,
+				9501303C21B504590000B11C /* ContactsSuggestionCollectionViewDatasource.swift */,
 				95012FF721B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.xib */,
 				95012FF921B3FFE80000B11C /* ContactsSuggestionTextField.swift */,
 				95012FF421B3FFE80000B11C /* ContactSuggestionBuilder.swift */,
 				95012FF221B3FFE80000B11C /* NSObject+ClassName.swift */,
 				95012FF621B3FFE80000B11C /* String+Width.swift */,
 				95012FF821B3FFE80000B11C /* SuggestedContact.swift */,
+				9501303621B4FCC20000B11C /* AccessoryViewDimension.swift */,
+				9501303821B4FE6C0000B11C /* UIFontTextStyle+Extension.swift */,
 				95012FE821B3FFDB0000B11C /* ContactsSuggestionTextField.h */,
 				95012FE921B3FFDB0000B11C /* Info.plist */,
 			);
@@ -163,10 +175,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9501303B21B501DB0000B11C /* ContactsSuggestionCollectionViewDelegate.swift in Sources */,
 				95012FFE21B3FFE80000B11C /* ContactSuggestionBuilder.swift in Sources */,
+				9501303721B4FCC20000B11C /* AccessoryViewDimension.swift in Sources */,
 				9501300021B3FFE80000B11C /* String+Width.swift in Sources */,
+				9501303D21B504590000B11C /* ContactsSuggestionCollectionViewDatasource.swift in Sources */,
 				95012FFB21B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.swift in Sources */,
 				95012FFD21B3FFE80000B11C /* ContactsManager.swift in Sources */,
+				9501303921B4FE6C0000B11C /* UIFontTextStyle+Extension.swift in Sources */,
 				9501300321B3FFE80000B11C /* ContactsSuggestionTextField.swift in Sources */,
 				95012FFF21B3FFE80000B11C /* ContactsSuggestionInputAccessoryCell.swift in Sources */,
 				9501300221B3FFE80000B11C /* SuggestedContact.swift in Sources */,
