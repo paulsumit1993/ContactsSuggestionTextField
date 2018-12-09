@@ -20,6 +20,12 @@
 		9501300321B3FFE80000B11C /* ContactsSuggestionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95012FF921B3FFE80000B11C /* ContactsSuggestionTextField.swift */; };
 		9501303721B4FCC20000B11C /* AccessoryViewDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501303621B4FCC20000B11C /* AccessoryViewDimension.swift */; };
 		9501303921B4FE6C0000B11C /* UIFontTextStyle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9501303821B4FE6C0000B11C /* UIFontTextStyle+Extension.swift */; };
+		9577FC1621BCEA6D009B6C5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9577FC1521BCEA6D009B6C5A /* AppDelegate.swift */; };
+		9577FC1821BCEA6D009B6C5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9577FC1721BCEA6D009B6C5A /* ViewController.swift */; };
+		9577FC1B21BCEA6D009B6C5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9577FC1921BCEA6D009B6C5A /* Main.storyboard */; };
+		9577FC1D21BCEA6E009B6C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9577FC1C21BCEA6E009B6C5A /* Assets.xcassets */; };
+		9577FC2021BCEA6E009B6C5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9577FC1E21BCEA6E009B6C5A /* LaunchScreen.storyboard */; };
+		9577FC2C21BCEC6F009B6C5A /* ContactsSuggestionTextField.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 95012FE521B3FFDB0000B11C /* ContactsSuggestionTextField.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +44,14 @@
 		95012FF921B3FFE80000B11C /* ContactsSuggestionTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsSuggestionTextField.swift; sourceTree = "<group>"; };
 		9501303621B4FCC20000B11C /* AccessoryViewDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessoryViewDimension.swift; sourceTree = "<group>"; };
 		9501303821B4FE6C0000B11C /* UIFontTextStyle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFontTextStyle+Extension.swift"; sourceTree = "<group>"; };
+		9577FC1321BCEA6D009B6C5A /* ContactsSuggestionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsSuggestionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9577FC1521BCEA6D009B6C5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9577FC1721BCEA6D009B6C5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9577FC1A21BCEA6D009B6C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9577FC1C21BCEA6E009B6C5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9577FC1F21BCEA6E009B6C5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9577FC2121BCEA6E009B6C5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9577FC2621BCEC00009B6C5A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,14 +62,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9577FC1021BCEA6D009B6C5A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9577FC2C21BCEC6F009B6C5A /* ContactsSuggestionTextField.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		95012FDB21B3FFDB0000B11C = {
 			isa = PBXGroup;
 			children = (
+				9577FC1421BCEA6D009B6C5A /* ContactsSuggestionDemo */,
 				95012FE721B3FFDB0000B11C /* ContactsSuggestionTextField */,
 				95012FE621B3FFDB0000B11C /* Products */,
+				9577FC2521BCEC00009B6C5A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				95012FE521B3FFDB0000B11C /* ContactsSuggestionTextField.framework */,
+				9577FC1321BCEA6D009B6C5A /* ContactsSuggestionDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,6 +111,27 @@
 				95012FE921B3FFDB0000B11C /* Info.plist */,
 			);
 			path = ContactsSuggestionTextField;
+			sourceTree = "<group>";
+		};
+		9577FC1421BCEA6D009B6C5A /* ContactsSuggestionDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9577FC1521BCEA6D009B6C5A /* AppDelegate.swift */,
+				9577FC1721BCEA6D009B6C5A /* ViewController.swift */,
+				9577FC1921BCEA6D009B6C5A /* Main.storyboard */,
+				9577FC1C21BCEA6E009B6C5A /* Assets.xcassets */,
+				9577FC1E21BCEA6E009B6C5A /* LaunchScreen.storyboard */,
+				9577FC2121BCEA6E009B6C5A /* Info.plist */,
+			);
+			path = ContactsSuggestionDemo;
+			sourceTree = "<group>";
+		};
+		9577FC2521BCEC00009B6C5A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9577FC2621BCEC00009B6C5A /* Foundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,18 +166,39 @@
 			productReference = 95012FE521B3FFDB0000B11C /* ContactsSuggestionTextField.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		9577FC1221BCEA6D009B6C5A /* ContactsSuggestionDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9577FC2421BCEA6E009B6C5A /* Build configuration list for PBXNativeTarget "ContactsSuggestionDemo" */;
+			buildPhases = (
+				9577FC0F21BCEA6D009B6C5A /* Sources */,
+				9577FC1021BCEA6D009B6C5A /* Frameworks */,
+				9577FC1121BCEA6D009B6C5A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContactsSuggestionDemo;
+			productName = ContactsSuggestionDemo;
+			productReference = 9577FC1321BCEA6D009B6C5A /* ContactsSuggestionDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		95012FDC21B3FFDB0000B11C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Sumit Paul";
 				TargetAttributes = {
 					95012FE421B3FFDB0000B11C = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
+					};
+					9577FC1221BCEA6D009B6C5A = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -141,6 +208,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 95012FDB21B3FFDB0000B11C;
 			productRefGroup = 95012FE621B3FFDB0000B11C /* Products */;
@@ -148,6 +216,7 @@
 			projectRoot = "";
 			targets = (
 				95012FE421B3FFDB0000B11C /* ContactsSuggestionTextField */,
+				9577FC1221BCEA6D009B6C5A /* ContactsSuggestionDemo */,
 			);
 		};
 /* End PBXProject section */
@@ -159,6 +228,16 @@
 			files = (
 				95012FFA21B3FFE80000B11C /* ContactsSuggestionInputAccessoryCell.xib in Resources */,
 				9501300121B3FFE80000B11C /* ContactsSuggestionInputAccessoryView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9577FC1121BCEA6D009B6C5A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9577FC2021BCEA6E009B6C5A /* LaunchScreen.storyboard in Resources */,
+				9577FC1D21BCEA6E009B6C5A /* Assets.xcassets in Resources */,
+				9577FC1B21BCEA6D009B6C5A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -182,7 +261,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9577FC0F21BCEA6D009B6C5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9577FC1821BCEA6D009B6C5A /* ViewController.swift in Sources */,
+				9577FC1621BCEA6D009B6C5A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		9577FC1921BCEA6D009B6C5A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9577FC1A21BCEA6D009B6C5A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9577FC1E21BCEA6E009B6C5A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9577FC1F21BCEA6E009B6C5A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		95012FEB21B3FFDB0000B11C /* Debug */ = {
@@ -310,11 +417,12 @@
 		95012FEE21B3FFDB0000B11C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7S642XDWVY;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -338,11 +446,12 @@
 		95012FEF21B3FFDB0000B11C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 7S642XDWVY;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -357,6 +466,42 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.sp.ContactsSuggestionTextField;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9577FC2221BCEA6E009B6C5A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContactsSuggestionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sp.ContactsSuggestionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9577FC2321BCEA6E009B6C5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ContactsSuggestionDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sp.ContactsSuggestionDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,6 +524,15 @@
 			buildConfigurations = (
 				95012FEE21B3FFDB0000B11C /* Debug */,
 				95012FEF21B3FFDB0000B11C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9577FC2421BCEA6E009B6C5A /* Build configuration list for PBXNativeTarget "ContactsSuggestionDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9577FC2221BCEA6E009B6C5A /* Debug */,
+				9577FC2321BCEA6E009B6C5A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
