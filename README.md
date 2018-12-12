@@ -1,5 +1,5 @@
 # ContactsSuggestionTextField
-[![iOS](https://img.shields.io/badge/platform-iOS_10+-blue.svg?style=flat)](https://developer.apple.com/ios/) [![Swift 4+](https://img.shields.io/badge/Swift-4.0+-F16D39.svg?style=flat)](https://swift.org) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![documentation](./docs/badge.svg)](https://paulsumit1993.github.io/ContactsSuggestionTextField/) [![iOS](https://img.shields.io/badge/platform-iOS_10+-blue.svg?style=flat)](https://developer.apple.com/ios/) [![Swift 4+](https://img.shields.io/badge/Swift-4.0+-F16D39.svg?style=flat)](https://swift.org) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A simple and adaptive UITextField subclass which attaches a contact picker to the textfield's input accessory view for seamless contact access. 
 
@@ -16,6 +16,9 @@ A simple and adaptive UITextField subclass which attaches a contact picker to th
 * Choose between phone number and e-mail address.
 * Adaptable UI.
 
+## Docs
+
+Documentation can be found [here](https://paulsumit1993.github.io/ContactsSuggestionTextField/).
 ## Usage
 
 To start using the component add it to your project using Carthage or manually as per the [Installation](#installation) section.
