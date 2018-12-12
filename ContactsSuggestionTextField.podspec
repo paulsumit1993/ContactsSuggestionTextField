@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ContactsSuggestionTextField"
-  s.version      = "0.0.3"
+  s.version      = "0.1"
   s.summary      = "Contact Picker UITextField"
   s.homepage     = "https://github.com/paulsumit1993/ContactsSuggestionTextField"
   s.description  = <<-DESC
