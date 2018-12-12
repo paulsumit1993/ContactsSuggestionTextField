@@ -8,7 +8,7 @@ public final class ContactsSuggestionTextField: UITextField {
     /// custom accessory view
     private var contactsAccessoryView: ContactsSuggestionInputAccessoryView?
     
-    /// block called when a user selects a contact in the accessory view, returns a string version of e-mail / phone number.
+    /// Block which is called when a user selects a contact in the accessory view, returns a string version of e-mail / phone number.
     public var contactSelectedHandler: ((String) -> Void)?
     
     override init(frame: CGRect) {

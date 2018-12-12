@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ContactsSuggestionTextField  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="ContactsSuggestionTextField  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">ContactsSuggestionTextField Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/paulsumit1993/ContactsSuggestionTextField"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">ContactsSuggestionTextField Reference</a>
+        <img id="carat" src="img/carat.png" />
+        ContactsSuggestionTextField  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ContactCustomizationBuilder.html">ContactCustomizationBuilder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ContactsSuggestionTextField.html">ContactsSuggestionTextField</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/ContactType.html">ContactType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ContactsNameStyle.html">ContactsNameStyle</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='contactssuggestiontextfield' class='heading'>ContactsSuggestionTextField</h1>
+
+<p><a href="https://developer.apple.com/ios/"><img src="https://img.shields.io/badge/platform-iOS_10+-blue.svg?style=flat" alt="iOS"></a> <a href="https://swift.org"><img src="https://img.shields.io/badge/Swift-4.0+-F16D39.svg?style=flat" alt="Swift 4+"></a> <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a></p>
+
+<p>A simple and adaptive UITextField subclass which attaches a contact picker to the textfield&rsquo;s input accessory view for seamless contact access. </p>
+<h4 id='keyboard-appearance-dark-light' class='heading'>Keyboard Appearance - Dark / Light</h4>
+
+<p><img src="/screenshots/screen-dark.png" height="355" width="200"/>  <img src="/screenshots/screen-light.png" height="355" width="200"/></p>
+
+<p><img src="/screenshots/white-accessory-view.gif" height="355" width="200"/>  <img src="/screenshots/dark-accessory-view.gif" height="355" width="200"/></p>
+<h5 id='note-this-library-uses-contacts-framework-and-hence-one-needs-to-provide-code-nscontactsusagedescription-code-in-the-app-39-s-code-info-plist-code-specifying-an-appropriate-reason' class='heading'>Note: This Library uses Contacts.framework and hence one needs to provide <code>NSContactsUsageDescription</code> in the app&rsquo;s <code>Info.plist</code> specifying an appropriate reason.</h5>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>Integrated Contacts Access and Permission Handling.</li>
+<li>Choose between phone number and e-mail address.</li>
+<li>Adaptable UI.</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>To start using the component add it to your project using Carthage or manually as per the <a href="#installation">Installation</a> section.</p>
+
+<p>The UI component can be used via the <code><a href="Classes/ContactsSuggestionTextField.html">ContactsSuggestionTextField</a></code> class. This control can be used very similar to <code>UITextField</code> - both from Interface Builder, or from code.</p>
+
+<p>To create an instance of the class, use Interface builder, or do it from code. This example will create a field which shows a short name and email address of a contact:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">textField</span> <span class="o">=</span> <span class="kt">ContactsSuggestionTextField</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">45</span><span class="p">))</span>
+
+<span class="c1">/// customize the textfield.</span>
+<span class="c1">/// For Interface Builder, an IBOutlet can be created and the customization can be done as illustrated below.</span>
+<span class="n">textField</span><span class="o">.</span><span class="n">customize</span> <span class="o">=</span> <span class="p">{</span> <span class="n">builder</span> <span class="k">in</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">contactNameStyle</span> <span class="o">=</span> <span class="o">.</span><span class="n">short</span>
+    <span class="n">builder</span><span class="o">.</span><span class="n">contactType</span> <span class="o">=</span> <span class="o">.</span><span class="n">emailAddress</span>
+<span class="p">}</span>
+<span class="k">self</span><span class="o">.</span><span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">textField</span><span class="p">)</span>
+</code></pre>
+
+<p>Do something when the user selects a contact like the following:</p>
+<pre class="highlight swift"><code><span class="n">tf</span><span class="o">.</span><span class="n">contactSelectedHandler</span> <span class="o">=</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="nv">contact</span><span class="p">:</span> <span class="kt">String</span> <span class="k">in</span>
+    <span class="c1">// do something with contact</span>
+<span class="p">}</span>
+</code></pre>
+<h1 id='installation' class='heading'>Installation</h1>
+<h4 id='cocoapods' class='heading'>CocoaPods</h4>
+
+<p>The control is available through <a href="https://cocoapods.org/">CocoaPods</a>. CocoaPods can be installed using <a href="https://rubygems.org/">Ruby gems</a>:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>gem <span class="nb">install </span>cocoapods
+</code></pre>
+
+<p>Then simply add <code><a href="Classes/ContactsSuggestionTextField.html">ContactsSuggestionTextField</a></code> to your Podfile:</p>
+<pre class="highlight plaintext"><code>pod 'ContactsSuggestionTextField', '~&gt; 0.0.3'
+</code></pre>
+
+<p>Lastly, let CocoaPods fetch the latest version of the component by running:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>pod update
+</code></pre>
+<h4 id='carthage' class='heading'>Carthage</h4>
+
+<p>The component supports <a href="https://github.com/Carthage/Carthage">Carthage</a>. Start by making sure you have the latest version of Carthage installed. Using <a href="http://brew.sh/">Homebrew</a> run this:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>brew update
+<span class="nv">$ </span>brew <span class="nb">install </span>carthage
+</code></pre>
+
+<p>Then add <code><a href="Classes/ContactsSuggestionTextField.html">ContactsSuggestionTextField</a></code> to your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "paulsumit1993/ContactsSuggestionTextField"
+</code></pre>
+
+<p>Finally, add the framework to the Xcode project of your App. Link the framework to your App and copy it to the App’s Frameworks directory via the “Build Phases” section.</p>
+<h4 id='manual' class='heading'>Manual</h4>
+
+<p>You can download the latest files from our <a href="https://github.com/paulsumit1993/ContactsSuggestionTextField/releases">Releases page</a>. After doing so, copy the files in the <code><a href="Classes/ContactsSuggestionTextField.html">ContactsSuggestionTextField</a></code> folder to your project.</p>
+<h2 id='contributing' class='heading'>Contributing</h2>
+
+<p>We welcome all contributions. Just open an issue or submit pull requests, and we will take it forward.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://twitter.com/zen_prog" target="_blank" rel="external">Sumit Paul</a>. All rights reserved. (Last updated: 2018-12-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.4</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
